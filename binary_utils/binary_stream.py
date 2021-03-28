@@ -243,4 +243,4 @@ class binary_stream:
         return temp
     
     def write_signed_var_long(self, value: int) -> None:
-        self.write_signed_var_long(value << 1 if value >= 0 else (-value - 1) << 1 | 1)
+        self.write_var_long(value << 1 if value >= 0 else (-value - 1) << 1 | 1)

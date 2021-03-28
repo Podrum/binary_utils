@@ -29,7 +29,7 @@
 #                                                                              #
 ################################################################################
 
-from utils.binary_converter import binary_converter
+from binary_utils.binary_converter import binary_converter
 
 class binary_stream:
     def __init__(self, data: bytes = b"", pos: int = 0) -> None:

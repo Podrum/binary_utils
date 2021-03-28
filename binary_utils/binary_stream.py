@@ -33,8 +33,8 @@ from binary_utils.binary_converter import binary_converter
 
 class binary_stream:
     def __init__(self, data: bytes = b"", pos: int = 0) -> None:
-        self.data = data
-        self.pos = pos
+        self.data: bytes = data
+        self.pos: int = pos
         
     def read(self, size: int) -> bytes:
         self.pos += size

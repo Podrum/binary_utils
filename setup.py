@@ -34,7 +34,7 @@ import setuptools
 setuptools.setup(
     name = "binary_utils",
     packages = ["binary_utils"],
-    version = "1.1",
+    version = "1.2",
     license = "MIT",
     description = "Podrum's Binary Utilities.",
     author = "Podrum",

@@ -202,12 +202,13 @@ class binary_stream:
         data: bytes = b""
         value &= 0xffffffff
         for i in range(0, 5):
-            if (value >> 7) != 0:
-                self.write_unsigned_byte(value | 0x80)
-            else:
-                self.write_unsigned_byte(value & 0x7f)
-                break
+            to_write: int = value & 0x7f
             value >>= 7
+            if value != 0:
+                self.write_unsigned_byte(to_write | 0x80)
+            else:
+                self.write_unsigned_byte(to_write)
+                break
                 
     def read_signed_var_int(self) -> int:
         raw: int = self.read_var_int()
@@ -230,12 +231,13 @@ class binary_stream:
             
     def write_var_long(self, value: int) -> None:
         for i in range(0, 10):
-            if (value >> 7) != 0:
-                self.write_unsigned_byte(value | 0x80)
-            else:
-                self.write_unsigned_byte(value & 0x7f)
-                break
+            to_write: int = value & 0x7f
             value >>= 7
+            if value != 0:
+                self.write_unsigned_byte(to_write | 0x80)
+            else:
+                self.write_unsigned_byte(to_write)
+                break
                 
     def read_signed_var_long(self) -> int:
         raw: int = self.read_var_long()

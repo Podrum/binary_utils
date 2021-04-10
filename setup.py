@@ -34,7 +34,7 @@ import setuptools
 setuptools.setup(
     name = "binary_utils",
     packages = ["binary_utils"],
-    version = "1.2",
+    version = "1.3",
     license = "MIT",
     description = "Podrum's Binary Utilities.",
     author = "Podrum",
@@ -49,6 +49,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9"
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10"
     ]
 )

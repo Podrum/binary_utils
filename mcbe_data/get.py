@@ -29,29 +29,18 @@
 #                                                                              #
 ################################################################################
 
-import glob
-import setuptools
+import os
+import json
 
-setuptools.setup(
-    name = "mcbe_data",
-    packages = ["mcbe_data"],
-    data_files = [("mcbe_data/data", glob.glob("mcbe_data/data/*.json"))],
-    include_package_data = True,
-    version = "0.1",
-    license = "MIT",
-    description = "Podrum's mcbe Data.",
-    author = "Podrum",
-    url = "https://github.com/Podrum/mcbe_data",
-    keywords = ["mcbe", "data", "python3"],
-    classifiers = [
-        "Development Status :: 5 - Production/Stable",
-        "Intended Audience :: Developers",
-        "Topic :: Software Development :: Libraries",
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9"
-    ]
-)
+class get:
+    @staticmethod
+    def get_data_folder() -> str:
+        return os.path.abspath(os.path.dirname(__file__)) + "/data"
+    
+    @staticmethod
+    def get_block_states():
+        return json.load(get.get_data_folder() + "/block_states.json")
+    
+    @staticmethod
+    def get_item_table():
+        return json.load(get.get_data_folder() + "/item_table.json")

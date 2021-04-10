@@ -29,29 +29,8 @@
 #                                                                              #
 ################################################################################
 
-import glob
-import setuptools
+__all__ = [
+    "get"
+]
 
-setuptools.setup(
-    name = "mcbe_data",
-    packages = ["mcbe_data"],
-    data_files = [("mcbe_data/data", glob.glob("mcbe_data/data/*.json"))],
-    include_package_data = True,
-    version = "0.1",
-    license = "MIT",
-    description = "Podrum's mcbe Data.",
-    author = "Podrum",
-    url = "https://github.com/Podrum/mcbe_data",
-    keywords = ["mcbe", "data", "python3"],
-    classifiers = [
-        "Development Status :: 5 - Production/Stable",
-        "Intended Audience :: Developers",
-        "Topic :: Software Development :: Libraries",
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9"
-    ]
-)
+from mcbe_data.get import get

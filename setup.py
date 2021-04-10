@@ -29,20 +29,17 @@
 #                                                                              #
 ################################################################################
 
-import glob
 import setuptools
 
 setuptools.setup(
-    name = "mcbe_data",
-    packages = ["mcbe_data"],
-    data_files = [("mcbe_data/data", glob.glob("mcbe_data/data/*.json"))],
-    include_package_data = True,
-    version = "0.1",
+    name = "binary_utils",
+    packages = ["binary_utils"],
+    version = "1.2",
     license = "MIT",
-    description = "Podrum's mcbe Data.",
+    description = "Podrum's Binary Utilities.",
     author = "Podrum",
-    url = "https://github.com/Podrum/mcbe_data",
-    keywords = ["mcbe", "data", "python3"],
+    url = "https://github.com/Podrum/binary_utils",
+    keywords = ["utils", "binary", "python3"],
     classifiers = [
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",

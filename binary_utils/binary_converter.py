@@ -31,7 +31,7 @@
 
 import struct
 
-class binary_converter:
+class BinaryConverter:
     @staticmethod
     def read_byte(data: bytes) -> int:
         return struct.unpack("b", data)[0]

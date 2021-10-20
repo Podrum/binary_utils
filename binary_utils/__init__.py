@@ -29,10 +29,10 @@
 #                                                                              #
 ################################################################################
 
-__all__: list = [
-    "binary_converter",
-    "binary_stream"
-]
+from binary_utils.binary_converter import BinaryConverter
+from binary_utils.binary_stream import BinaryStream
 
-from binary_utils.binary_converter import binary_converter
-from binary_utils.binary_stream import binary_stream
+__all__ = (
+    "BinaryConverter",
+    "BinaryStream"
+)

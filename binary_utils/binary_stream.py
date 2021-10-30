@@ -14,6 +14,7 @@ r"""
 
 from binary_utils.binary_converter import BinaryConverter
 
+
 class BinaryStream:
     def __init__(self, data: bytes = b"", pos: int = 0) -> None:
         self.data: bytes = data

@@ -14,6 +14,7 @@ r"""
 
 import struct
 
+
 class BinaryConverter:
     @staticmethod
     def read_byte(data: bytes) -> int:

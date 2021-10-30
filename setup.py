@@ -18,7 +18,7 @@ setuptools.setup(
     name = "binary_utils",
     packages = ["binary_utils"],
     version = "1.3",
-    license = "MIT",
+    license = "GPLv2.0",
     description = "Podrum's Binary Utilities.",
     author = "Podrum",
     url = "https://github.com/Podrum/binary_utils",
